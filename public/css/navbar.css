@@ -1,0 +1,54 @@
+/* collapse navbar earlier */
+@media (max-width: 991px) {
+	.navbar-collapse.collapse {
+		display: none !important;
+	}
+
+	.navbar-collapse.collapse.in {
+		display: block !important;
+	}
+
+	.navbar-header .collapse, .navbar-toggle {
+		display: block !important;
+	}
+
+	.navbar-header {
+		float: none;
+	}
+}
+
+
+.navbar {
+	padding: 10px 0px 10px 0px;
+}
+
+.navbar-default {
+	background-color: #b0bec5;
+	opacity: 0.95;
+
+}
+
+/* logo center align */
+.brand {
+	position: absolute;
+	left: 50%;
+	padding: 3px 0px 15px 0px;
+	margin: 0px 0px 0px -25px !important;
+	display: block;
+	cursor: default;
+}
+
+/* center align navbar */
+.navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+}
+
+.navLeft {
+	padding-right: 130px !important;
+}
+.navRight {
+	padding-left: 130px !important;
+}
+
+
