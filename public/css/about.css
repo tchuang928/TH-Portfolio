@@ -1,5 +1,18 @@
-#aboutText {
-	padding: 5px 0px 0px 0px;
+#intro {
+	padding: 350px 0px 350px 0px;
+	/*background-image: url("http://cdn.wallpapersafari.com/92/61/Uu5mN9.jpg");*/
+	background-image: url("../img/bluegrey1.jpg");
+	background-size: cover;
+	width: 100%;
+}
+
+.introText {
+	color: white;
+}
+
+#about {
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 #name {
