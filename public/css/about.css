@@ -4,21 +4,25 @@
 	background-image: url("../img/bluegrey1.jpg");
 	background-size: cover;
 	width: 100%;
-}
-
-.introText {
-	color: white;
-}
-
-#about {
-	padding-top: 50px;
-	padding-bottom: 50px;
+	/* parallax */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
 #name {
 	padding-bottom: 15px;
 }
 
-#projects {
-	padding-top: 25px;
+
+.introText {
+	color: white;
+}
+
+.aboutPadding {
+	padding: 50px 0px 50px 0px;
+	-webkit-transition: width 1.25s linear;
+	-moz-transition: width 1.25s linear;
+	-o-transition: width 1.25s linear;
+	transition: width 1.25s linear;
 }

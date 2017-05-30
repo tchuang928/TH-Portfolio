@@ -14,7 +14,16 @@ html, body{
 .subtitle {
 	background: #b0bec5;
 	box-shadow: 0px 3px 5px #263238;
-	margin: 50px;
 	padding: 10px;
 	font-size: 24px;
+	margin: 30px;
+}
+
+.joinNavbar {
+	margin: 77px 0px 0px 0px;
+	opacity: 0.9;
+	-webkit-transition: width 1.25s linear;
+	-moz-transition: width 1.25s linear;
+	-o-transition: width 1.25s linear;
+	transition: width 1.25s linear;
 }
