@@ -1,4 +1,4 @@
-#intro {
+.introImg {
 	padding: 350px 0px 350px 0px;
 	/*background-image: url("http://cdn.wallpapersafari.com/92/61/Uu5mN9.jpg");*/
 	background-image: url("../img/bluegrey2.jpg");
@@ -8,6 +8,11 @@
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
+  -webkit-filter: grayscale(40%);
+  -moz-filter: grayscale(40%); 
+  -o-filter: grayscale(40%); 
+  -ms-filter: grayscale(40%); 
+  filter: grayscale(40%); 
 }
 
 #name {
