@@ -1,0 +1,83 @@
+'use strict'
+
+$(document).ready(() => {
+	
+	// detect scroll position and run proper animation
+	if ($(document).scrollTop() > 50) {
+		$('nav').addClass('scrollFunc');
+	} else {
+		$('nav').removeClass('scrollFunc');
+	}
+	if ($(document).scrollTop() >= 762) {
+		$('#aboutNavbar').fadeIn('slow');
+		$('#aboutTitle').slideUp('slow');
+		$('#aboutPadding').slideDown('slow');
+
+	} else {
+		$('#aboutNavbar').hide();
+		$('#aboutTitle').slideDown('slow');
+		$('#aboutPadding').slideUp('slow');
+	}
+		if ($(document).scrollTop() >= 1288) {
+			$('#projectsNavbar').fadeIn('slow');
+			$('#projectsTitle').slideUp('slow');
+			$('#projectsPadding').slideDown('slow');
+
+		} else {
+			$('#projectsNavbar').hide();
+			$('#projectsTitle').slideDown('slow');
+			$('#projectsPadding').slideUp('slow');
+		}
+
+	// smooth scrolling
+  $('a').on('click', function(event) {
+
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+
+      $('html, body').animate({
+				// create variable scrollTop number when scrolling from the top due to hide and show subtitles
+        scrollTop: $(hash).offset().top -107
+			}, 1000, () => {
+        window.location.hash = hash;
+      });
+    } 
+  });
+
+
+	// navbar animation on scroll
+	$(window).scroll(() => {
+		if ($(document).scrollTop() < 50) {
+			$('nav').addClass('navPadding');
+			$('nav').removeClass('scrollFunc');
+		} else {
+			$('nav').removeClass('navPadding');
+			$('nav').addClass('scrollFunc');
+		}
+
+		// about section subtitle animation on scroll
+		if ($(document).scrollTop() < 762) {
+			$('#aboutNavbar').hide();
+			$('#aboutTitle').slideDown('slow');
+			$('#aboutPadding').slideUp('slow');
+		} else if ($(document).scrollTop() < 1258) {
+			$('#aboutNavbar').fadeIn('slow');
+			$('#aboutTitle').slideUp('slow');
+			$('#aboutPadding').slideDown('slow');
+			$('#projectsNavbar').hide();
+			$('#projectsTitle').slideDown('slow');
+			$('#projectsPadding').slideUp('slow');
+		} else {
+			$('#projectsNavbar').fadeIn('slow');
+			$('#projectsTitle').slideUp('slow');
+			$('#projectsPadding').slideDown('slow');
+		}
+	});
+
+	// detect scroll position
+	$(window).scroll(function (event) {
+			var scroll = $(window).scrollTop();
+			console.log(scroll);
+	});
+});

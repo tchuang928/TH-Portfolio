@@ -19,11 +19,3 @@ html, body{
 	margin: 30px;
 }
 
-.joinNavbar {
-	margin: 77px 0px 0px 0px;
-	opacity: 0.9;
-	-webkit-transition: width 1.25s linear;
-	-moz-transition: width 1.25s linear;
-	-o-transition: width 1.25s linear;
-	transition: width 1.25s linear;
-}
