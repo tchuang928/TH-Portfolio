@@ -3,8 +3,8 @@ html, body{
 	font-family: Ubuntu;
 }
 
-.container {
-	max-width: 1200px;
+.container-fluid {
+	max-width: 1200px !important;
 }
 
 #wrapper {

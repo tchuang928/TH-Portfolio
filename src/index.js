@@ -17,7 +17,7 @@ function contentSubtitleAnimation() {
 	let nav_height = $('nav').outerHeight();
 
 	$('section').each(function(index, value) {
-		let top = $(this).offset().top - nav_height - 235;
+		let top = $(this).offset().top - nav_height - 50;
 		let bottom = top + $(this).outerHeight();
 
 		if (position >= top && position <= bottom) {
@@ -42,7 +42,7 @@ $(document).ready(() => {
 		var $href = $(this).attr('href');
 		$('body').stop().animate({
 			scrollTop: $($href).offset().top - 107
-		}, 1000);
+		}, 1500);
 		return false;
 	});
 
