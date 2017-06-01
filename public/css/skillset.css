@@ -73,24 +73,109 @@ button:hover {
   top: 0;
   left: 0;
 }
+
 .spin::before {
   border: 2px solid transparent;
+  /*transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s; */
+	animation: beforeOut .5s;
 }
 .spin:hover::before {
-  border-top-color: #0eb7da;
-  border-right-color: #0eb7da;
-  border-bottom-color: #26a69a;
-  transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+	animation: beforeIn .5s forwards;
 }
+
+
+@keyframes beforeIn {
+	0% {
+		border-right: 2px solid transparent;
+		border-bottom: 2px solid transparent;
+		border-left: 2px solid transparent;
+	}
+	25% {
+		border-right: 2px solid transparent;
+		border-bottom: 2px solid transparent;
+		border-left: 2px solid transparent;
+	}
+	50% {
+		border-right: 2px solid #0eb7da;
+		border-bottom: 2px solid transparent;
+		border-left: 2px solid transparent;
+	}
+	75% {
+		border-right: 2px solid #0eb7da;
+		border-bottom: 2px solid #0eb7da;
+		border-left: 2px solid transparent;
+	}
+	100% {
+		border-right: 2px solid #0eb7da;
+		border-bottom: 2px solid #0eb7da;
+		border-left: 2px solid #26a69a;
+	}
+}
+
+@keyframes beforeOut {
+	0% {
+		border-right: 2px solid #0eb7da;
+		border-bottom: 2px solid #0eb7da;
+		border-left: 2px solid #26a69a;
+	}
+	25% {
+		border-right: 2px solid #0eb7da;
+		border-bottom: 2px solid #0eb7da;
+		border-left: 2px solid #26a69a;
+	}
+	50% {
+		border-right: 2px solid #0eb7da;
+		border-bottom: 2px solid #0eb7da;
+		border-left: 2px solid transparent;
+	}
+	75% {
+		border-right: 2px solid #0eb7da;
+		border-bottom: 2px solid transparent;
+		border-left: 2px solid transparent;
+	}
+	100% {
+		border-right: 2px solid transparent;
+		border-bottom: 2px solid transparent;
+		border-left: 2px solid transparent;
+	}
+}
+
 .spin::after {
   border: 0 solid transparent;
+  border-left-width: 2px;
+  border-right-width: 2px;
+  /*transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;*/
+	animation: afterOut 1s;
 }
 .spin:hover::after {
+  border: 0 solid transparent;
   border-top: 2px solid #26a69a;
   border-left-width: 2px;
   border-right-width: 2px;
-  transform: rotate(270deg);
-  transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+  /*transform: rotate(360deg);*/
+	animation: afterIn 1s;
+}
+
+@keyframes afterIn {
+	0% {
+		border-top: 2px solid #26a69a;
+		transform: rotate(0deg);
+	}
+	100% {
+		border-top: 2px solid #26a69a;
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes afterOut {
+	0% {
+		border-top: 2px solid #26a69a;
+		transform: rotate(360deg);
+	}
+	100% {
+		border-top: 2px solid transparent;
+		transform: rotate(0deg);
+	}
 }
 
 .circle {
@@ -106,10 +191,10 @@ button:hover {
 	font-size: 35px;
 	position: relative;
 	top: 2px;
-	-webkit-transition: color .5s ease;
-	-moz-transition: color .5s ease;
-	-o-transition: color .5s ease;
-	transition: color .5s ease;
+	-webkit-transition: color 1s ease;
+	-moz-transition: color 1s ease;
+	-o-transition: color 1s ease;
+	transition: color 1s ease;
 }
 
 .iconText {
