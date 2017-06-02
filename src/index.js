@@ -21,13 +21,14 @@ function contentSubtitleAnimation() {
 		let bottom = top + $(this).outerHeight();
 
 		if (position >= top && position <= bottom) {
-			$(this).children('a').fadeIn(100)
-			$(this).children('.title').slideUp('fast')
-			$(this).children('.addPadding').slideDown('fast')
+			let that = $(this);
+			that.children('.title').slideUp(800); 
+			that.children('a').fadeIn(100);
 		} else {
-			$(this).children('a').fadeOut(100)
-			$(this).children('.title').slideDown('fast')
-			$(this).children('.addPadding').slideUp('fast')
+			let that = $(this);
+			that.children('a').fadeOut('fast', function() {
+				that.children('.title').slideDown(10);
+			}); 
 		}
 	});
 }
@@ -42,7 +43,7 @@ $(document).ready(() => {
 		var $href = $(this).attr('href');
 		$('body').stop().animate({
 			scrollTop: $($href).offset().top - 100
-		}, 1500);
+		}, 1000);
 		return false;
 	});
 

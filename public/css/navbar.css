@@ -186,12 +186,29 @@
 }
 
 .circle-effect a:hover::before,
-.circle-effect a:hover::after,
-.circle-effect a:focus::before,
-.circle-effect a:focus::after {
+.circle-effect a:hover::after {
 	opacity: 1;
 	-webkit-transform: translateX(-50%) translateY(-50%) scale(1);
 	-moz-transform: translateX(-50%) translateY(-50%) scale(1);
 	transform: translateX(-50%) translateY(-50%) scale(1);
 }
 
+.circle-effect-active {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 70px;
+	height: 70px;
+	border: 2px solid rgba(255,255,255,0.3);
+	border-radius: 50%;
+}
+
+.circle-effect1 {
+	width: 60px;
+	height: 60px;
+	border-width: 6px;
+	border: 6px solid rgba(255,255,255,0.3);
+	border-radius: 50%;
+	margin: 3px 0px 0px 3px;
+
+}
