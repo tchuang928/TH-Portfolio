@@ -21,11 +21,11 @@ function contentSubtitleAnimation() {
 		let bottom = top + $(this).outerHeight();
 
 		if (position >= top && position <= bottom) {
-			$(this).children('.joinNavbar').fadeIn(1000)
+			$(this).children('a').fadeIn(100)
 			$(this).children('.title').slideUp('fast')
 			$(this).children('.addPadding').slideDown('fast')
 		} else {
-			$(this).children('.joinNavbar').fadeOut('fast')
+			$(this).children('a').fadeOut(100)
 			$(this).children('.title').slideDown('fast')
 			$(this).children('.addPadding').slideUp('fast')
 		}
@@ -41,7 +41,7 @@ $(document).ready(() => {
 	$('a').click(function () {
 		var $href = $(this).attr('href');
 		$('body').stop().animate({
-			scrollTop: $($href).offset().top - 107
+			scrollTop: $($href).offset().top - 100
 		}, 1500);
 		return false;
 	});

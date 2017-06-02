@@ -1,6 +1,7 @@
 html, body{
 	font-size: 16px;
 	font-family: Ubuntu;
+	overflow-x: hidden;
 }
 
 .container-fluid {
@@ -9,6 +10,9 @@ html, body{
 
 #wrapper {
 	background: #fff;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
 }
 
 .subtitle {
