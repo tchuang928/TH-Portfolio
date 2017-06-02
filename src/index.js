@@ -27,7 +27,7 @@ function contentSubtitleAnimation() {
 		} else {
 			let that = $(this);
 			that.children('a').fadeOut('fast', function() {
-				that.children('.title').slideDown(10);
+				that.children('.title').slideDown(400);
 			}); 
 		}
 	});
