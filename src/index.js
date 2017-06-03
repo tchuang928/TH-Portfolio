@@ -17,9 +17,10 @@ function contentSubtitleAnimation() {
 	let nav_height = $('nav').outerHeight();
 
 	$('section').each(function(index, value) {
-		let top = $(this).offset().top - nav_height - 50;
+		let top = $(this).offset().top - nav_height - 40;
 		let bottom = top + $(this).outerHeight();
 
+		// animate subtitle content sections
 		if (position >= top && position <= bottom) {
 			let that = $(this);
 			that.children('.title').slideUp(800); 
@@ -31,6 +32,22 @@ function contentSubtitleAnimation() {
 			}); 
 		}
 	});
+}
+
+function introTextOpacity() {
+	let position = $(document).scrollTop();
+	if (position < 200) {
+		$('#introBackgroundColor').css('opacity', '1');
+	}
+	if ((position >=200) && (position <= 520)) {
+		// normalize position
+		let opacity = (-1 * position / 80 + 6.5) / 4;
+		console.log(opacity);
+		$('#introBackgroundColor').css('opacity', `${opacity}`)
+	}
+	if (position > 520) {
+		$('#introBackgroundColor').css('opacity', '0');
+	}
 }
 
 
@@ -50,15 +67,14 @@ $(document).ready(() => {
 
 	// navbar animation on scroll
 	$(window).scroll(() => {
+		introTextOpacity();
 		navbarAnimation();
 		contentSubtitleAnimation();
 	});
 
 	// detect scroll position
-	/*	
 	$(window).scroll((event) => {
 			var scroll = $(window).scrollTop();
 			console.log(scroll);
 	});
-	*/
 });
