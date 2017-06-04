@@ -68,9 +68,7 @@ $(document).ready(() => {
 		navbarAnimation();
 		contentSubtitleAnimation();
 	});
-	if ($('.portfolio-item:hover')) {
-		console.log('yes');
-	}
+
 	/*
 	if !($('.portfolio-item').mouseover()) {
 		$('.img-overlay').hide();
