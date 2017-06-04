@@ -17,8 +17,8 @@ function contentSubtitleAnimation() {
 	let nav_height = $('nav').outerHeight();
 
 	$('section').each(function(index, value) {
-		let top = $(this).offset().top - nav_height - 40;
-		let bottom = top + $(this).outerHeight();
+		let top = $(this).offset().top - nav_height - 50;
+		let bottom = top + $(this).outerHeight() + 20;
 
 		// animate subtitle content sections
 		if (position >= top && position <= bottom) {
@@ -42,7 +42,6 @@ function introTextOpacity() {
 	if ((position >=200) && (position <= 520)) {
 		// normalize position
 		let opacity = (-1 * position / 80 + 6.5) / 4;
-		console.log(opacity);
 		$('#introBackgroundColor').css('opacity', `${opacity}`)
 	}
 	if (position > 520) {
@@ -64,17 +63,23 @@ $(document).ready(() => {
 		return false;
 	});
 
-
-	// navbar animation on scroll
 	$(window).scroll(() => {
 		introTextOpacity();
 		navbarAnimation();
 		contentSubtitleAnimation();
 	});
-
+	if ($('.portfolio-item:hover')) {
+		console.log('yes');
+	}
+	/*
+	if !($('.portfolio-item').mouseover()) {
+		$('.img-overlay').hide();
+	}
 	// detect scroll position
+	/*
 	$(window).scroll((event) => {
-			var scroll = $(window).scrollTop();
-			console.log(scroll);
+		var scroll = $(window).scrollTop();
+		console.log(scroll);
 	});
+  */
 });

@@ -149,6 +149,7 @@
 .aTitle {
 	text-decoration: none;
 	color: #000;
+	transition: color .3s;
 }
 
 .aTitle:hover {
