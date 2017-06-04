@@ -1,5 +1,7 @@
 #projects {
-	column-width: 28.5em;
+	-moz-column-count: 2;
+	-webkit-column-count: 2;
+	column-count: 2;
 	column-gap: 1em;
 }
 
@@ -39,6 +41,9 @@
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 	z-index: -1;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 
 
