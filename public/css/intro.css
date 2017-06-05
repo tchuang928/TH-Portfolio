@@ -68,7 +68,7 @@
 }
 
 .addPadding {
-	padding: 100px 0px 50px 0px;
+	padding: 50px 0px 100px 0px;
 	-webkit-transition: width 1.25s linear;
 	-moz-transition: width 1.25s linear;
 	-o-transition: width 1.25s linear;

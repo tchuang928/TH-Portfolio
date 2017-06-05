@@ -21,6 +21,7 @@ function contentSubtitleAnimation() {
 		let bottom = top + $(this).outerHeight();
 
 		// animate subtitle content sections
+		/*
 		if (position >= top && position <= bottom) {
 			let that = $(this);
 			that.children('.title').slideUp(800); 
@@ -33,6 +34,7 @@ function contentSubtitleAnimation() {
 				that.children('hr').slideDown(400);
 			}); 
 		}
+		*/
 	});
 }
 
@@ -56,10 +58,10 @@ function topOfPage() {
 	let position = $(document).scrollTop(); 
 	let bottom = $('#intro').outerHeight() - 100;
 	if (position > bottom) {
-		$('.top-of-page').slideDown(800);
+		$('.top-of-page').slideDown(250);
 	}
 	else {
-		$('.top-of-page').slideUp(800);
+		$('.top-of-page').slideUp(250);
 	}
 }
 

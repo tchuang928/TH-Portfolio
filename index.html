@@ -16,6 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="public/css/intro.css">
 		<link rel="stylesheet" type="text/css" href="public/css/skillset.css">
 		<link rel="stylesheet" type="text/css" href="public/css/projects.css">
+		<link rel="stylesheet" type="text/css" href="public/css/contact.css">
 	</head>
 	
 	<body>
@@ -109,7 +110,9 @@
 			<section id="aboutLink">
 				<h1 class="text-center subtitle title" id="aboutTitle">ABOUT ME</h1>
 				<hr>
+				<!--
 				<a href="#aboutLink" class="aTitle"><h1 class="text-center navSubtitle joinNavbar navbar-fixed-top" id="aboutNavbar">ABOUT ME</h1></a>
+				-->
 				<div class="container-fluid addPadding">
 					<div class="row" id="about">
 						<div class="col-md-3">
@@ -239,7 +242,9 @@
 			<section id="projectsLink">
 				<h1 class="text-center subtitle title" id="projectsTitle">PROJECTS</h1>
 				<hr>
+				<!--
 				<a href="#projectsLink" class="aTitle"><h1 class="text-center navSubtitle joinNavbar navbar-fixed-top" id="projectsNavbar">PROJECTS</h1></a>
+				-->
 				<div class="container-fluid addPadding">
 					<div class="row" id="projects">
 						<div class="portfolio-col">
@@ -320,9 +325,45 @@
 			<section id="contactLink">
 				<h1 class="text-center subtitle title">CONTACT ME</h1>
 				<hr>
+				<!--
 				<a href="#contactLink" class="aTitle"><h1 class="text-center navSubtitle joinNavbar navbar-fixed-top" id="contactNavbar">CONTACT ME</h1></a>
+				-->
 				<div class="container-fluid addPadding">
-					<div class="row" id="contact">
+					<div class="row" id="contact-info">
+						<div class="col-xs-6 text-center">
+							<i class="fa fa-phone contact-info-icon"></i>
+							<b><p class="contact-info-text">PHONE<br></p></b>
+							<p>+949 572 3387</p>
+						</div>
+						<div class="col-xs-6 text-center">
+							<i class="fa fa-envelope contact-info-icon"></i>
+							<b><p class="contact-info-text">EMAIL</p></b>
+							<p>tc.huang928@gmail.com</p>
+						</div>
+					</div>
+					<div role="form" class="wpcf7" id="">
+						<form action="" method="post" class="wpcf7-form" novalidate="novalidate">
+							<div class="row">
+								<div class="col-md-6 col-sm-6 col-xs-6 text-center">
+									<span class="wpcf7-form-control-wrap fname">
+										<input type="text" name="fname" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" placeholder="Name *">
+									</span>
+								</div>
+								<div class="col-md-6 col-sm-6 col-xs-6 text-center">
+									<span class="wpcf7-form-control-wrap femail">
+										<input type="email" name="femail" value size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" placeholder="Email *">
+									</span>
+								</div>
+							</div>
+							<div class="row text-left">
+								<div class="col-md-12 col-sm-12 col-xs-12">
+									<span class="wpcf7-form-control-wrap fmessage">
+										<textarea name="fmessage" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" placeholder="Message *"></textarea>
+									</span>
+									<input type="submit" value="SEND" class="wpcf7-form-control wpcf7-submit btn">
+								</div>
+							</div>
+						</form>
 					</div>
 				</div>
 			</section>
@@ -331,16 +372,15 @@
 		<footer id="footer">
 			<div class="footer-wrapper">
 				<div class="row">
-					<div class="col-md-12 social">
-						<ul>
-							<li><a href="https://github.com/tchuang928" target="_blank"><i class="fa fa-github"></i><a></li>
-							<li><a href="https://www.linkedin.com/in/tomhuang7/" target="_blank"><i class="fa fa-linkedin"></i><a></li>
-							<li><a href="https://www.facebook.com/tom.huang3" target="_blank"><i class="fa fa-facebook"></i><a></li>
-						</ul>
+					<div class="col-md-12 social text-center">
+						<a class="footer-icon" href="https://github.com/tchuang928" target="_blank"><i class="fa fa-github"></i><a>
+						<a class="footer-icon" href="https://www.linkedin.com/in/tomhuang7/" target="_blank"><i class="fa fa-linkedin"></i><a>
+						<a class="footer-icon" href="https://www.facebook.com/tom.huang3" target="_blank"><i class="fa fa-facebook"></i><a>
 					</div>
 				</div>
 			</div>
 		</footer>
+
 		<!-- Back to top button -->
 		<a href="#intro">
 			<div class="top-of-page">

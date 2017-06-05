@@ -22,9 +22,9 @@ html, body{
 
 hr {
 	width: 50px;
-	height: 1px;
+	height: 2px;
 	border: 0;
-	background-color: #1e1e1e;
+	background-color: #2fc8eb;
 }
 
 .navSubtitle {
@@ -67,9 +67,25 @@ div > h1 {
 }
 
 .footer-wrapper {
-	background-color: #263238;
+	background-color: #374349;
+	padding: 10px 0;
 }
 
-.social {
+.footer-icon {
 	display: inline-block;
+	text-align: center;
+	color: black;
+	line-height: 26px;
+	height: 30px;
+	width: 30px;
+	font-size: 16px;
+	border: 2px solid black;
+	border-radius: 50%;
+	transition: all .3s;
 }
+
+.footer-icon:hover {
+	background-color: #2fc8eb; 
+	border-color: #2fc8eb; 
+}
+
