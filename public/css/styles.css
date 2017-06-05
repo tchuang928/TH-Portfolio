@@ -16,11 +16,22 @@ html, body{
 }
 
 .subtitle {
+	font-size: 24px;
+	padding-top: 150px;
+}
+
+hr {
+	width: 50px;
+	height: 1px;
+	border: 0;
+	background-color: #1e1e1e;
+}
+
+.navSubtitle {
 	background: #b0bec5;
 	box-shadow: 0px 3px 5px #263238;
 	padding: 10px;
 	font-size: 24px;
-	margin: 30px 30px 0px 30px;
 }
 
 .top-of-page a {
@@ -35,10 +46,8 @@ html, body{
 	bottom: 50px;
 	right: 30px;
 	padding: 10px 10px;
-}
-
-.top-of-page:hover {
-	background-color: 
+	z-index: 3;
+	border-radius: 5%;
 }
 
 .top-of-page-icon {
@@ -48,10 +57,19 @@ html, body{
 	margin: auto;
 }
 
-
+section > h1,
+div > h1 {
+	margin: 0px;
+}
 .top-of-page-text {
 	font-size: 13px;
 	color: white;
 }
 
+.footer-wrapper {
+	background-color: #263238;
+}
 
+.social {
+	display: inline-block;
+}

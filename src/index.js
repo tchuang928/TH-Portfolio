@@ -17,18 +17,20 @@ function contentSubtitleAnimation() {
 	let nav_height = $('nav').outerHeight();
 
 	$('section').each(function() {
-		let top = $(this).offset().top - nav_height - 50;
-		let bottom = top + $(this).outerHeight() + 20;
+		let top = $(this).offset().top - nav_height - 10;
+		let bottom = top + $(this).outerHeight();
 
 		// animate subtitle content sections
 		if (position >= top && position <= bottom) {
 			let that = $(this);
 			that.children('.title').slideUp(800); 
+			that.children('hr').slideUp(800);
 			that.children('a').fadeIn(100);
 		} else {
 			let that = $(this);
 			that.children('a').fadeOut('fast', function() {
 				that.children('.title').slideDown(400);
+				that.children('hr').slideDown(400);
 			}); 
 		}
 	});
@@ -71,7 +73,7 @@ $(document).ready(() => {
 	$('a').click(function () {
 		var $href = $(this).attr('href');
 		$('body').stop().animate({
-			scrollTop: $($href).offset().top - 100
+			scrollTop: $($href).offset().top - 70
 		}, 1000);
 		return false;
 	});
