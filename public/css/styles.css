@@ -54,10 +54,4 @@ html, body{
 	color: white;
 }
 
-.top-of-page:hover polyline,
-.top-of-page:hover .top-of-page-text {
-	stroke: #2fc8eb;
-	color: #2fc8eb;
-}
-
 

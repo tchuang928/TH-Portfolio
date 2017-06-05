@@ -16,7 +16,7 @@ function contentSubtitleAnimation() {
 	let position = $(document).scrollTop();
 	let nav_height = $('nav').outerHeight();
 
-	$('section').each(function(index, value) {
+	$('section').each(function() {
 		let top = $(this).offset().top - nav_height - 50;
 		let bottom = top + $(this).outerHeight() + 20;
 
@@ -36,6 +36,7 @@ function contentSubtitleAnimation() {
 
 function introTextOpacity() {
 	let position = $(document).scrollTop();
+
 	if (position < 200) {
 		$('#introBackgroundColor').css('opacity', '1');
 	}
@@ -49,10 +50,22 @@ function introTextOpacity() {
 	}
 }
 
+function topOfPage() {
+	let position = $(document).scrollTop(); 
+	let bottom = $('#intro').outerHeight() - 100;
+	if (position > bottom) {
+		$('.top-of-page').slideDown(800);
+	}
+	else {
+		$('.top-of-page').slideUp(800);
+	}
+}
 
 $(document).ready(() => {
+	// check for scroll position in case of browser refresh
 	navbarAnimation();
 	contentSubtitleAnimation();
+	topOfPage();
 
 	// smooth scrolling
 	$('a').click(function () {
@@ -63,21 +76,16 @@ $(document).ready(() => {
 		return false;
 	});
 
+	// scrolling animations
 	$(window).scroll(() => {
 		introTextOpacity();
 		navbarAnimation();
 		contentSubtitleAnimation();
+		topOfPage();
 	});
-
-	/*
-	if !($('.portfolio-item').mouseover()) {
-		$('.img-overlay').hide();
-	}
 	// detect scroll position
-	/*
 	$(window).scroll((event) => {
 		var scroll = $(window).scrollTop();
 		console.log(scroll);
 	});
-  */
 });
