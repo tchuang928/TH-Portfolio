@@ -104,71 +104,69 @@ $(document).ready(() => {
 // contact form animation
 $(document).ready(function() {
 	// Test for placeholder support
-    $.support.placeholder = (function(){
-        var i = document.createElement('input');
-        return 'placeholder' in i;
-    })();
+	$.support.placeholder = (function(){
+			var i = document.createElement('input');
+			return 'placeholder' in i;
+	})();
 
-    // Hide labels by default if placeholders are supported
-    if($.support.placeholder) {
-        $('.form-label').each(function(){
-            $(this).addClass('js-hide-label');
-        });  
+	// Hide labels by default if placeholders are supported
+	if($.support.placeholder) {
+		$('.form-label').each(function(){
+				$(this).addClass('js-hide-label');
+		});  
 
-        // Code for adding/removing classes here
-        $('.form-group').find('input, textarea').on('keyup blur focus', function(e){
-            
-            // Cache our selectors
-            var $this = $(this),
-                $parent = $this.parent().find("label");
+		// Code for adding/removing classes here
+		$('.form-group').find('input, textarea').on('keyup blur focus', function(e){
+				
+			// Cache our selectors
+			var $this = $(this),
+				$parent = $this.parent().find("label");
 
-            if (e.type == 'keyup') {
-                if( $this.val() == '' ) {
-                    $parent.addClass('js-hide-label'); 
-                } else {
-                    $parent.removeClass('js-hide-label');   
-                }                     
-            } 
-            else if (e.type == 'blur') {
-                if( $this.val() == '' ) {
-                    $parent.addClass('js-hide-label');
-                } 
-                else {
-                    $parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
-                }
-            } 
-            else if (e.type == 'focus') {
-                if( $this.val() !== '' ) {
-                    $parent.removeClass('js-unhighlight-label');
-                }
-            }
-        });
-    } 
+			if (e.type == 'keyup') {
+				if( $this.val() == '' ) {
+						$parent.addClass('js-hide-label'); 
+				} else {
+						$parent.removeClass('js-hide-label');   
+				}                     
+			} 
+			else if (e.type == 'blur') {
+				if( $this.val() == '' ) {
+						$parent.addClass('js-hide-label');
+				} 
+				else {
+						$parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
+				}
+			} 
+			else if (e.type == 'focus') {
+				if( $this.val() !== '' ) {
+						$parent.removeClass('js-unhighlight-label');
+				}
+			}
+		});
+	} 
+
+	function _(id){ return document.getElementById(id); }
+	function submitForm(){
+		_("contact-submit").disabled = true;
+		_("status").innerHTML = 'please wait ...';
+		var formdata = new FormData();
+		formdata.append( "name", _("name").value );
+		formdata.append( "email", _("email").value );
+		formdata.append( "subject", _("subject").value );
+		formdata.append( "message", _("message").value );
+		var ajax = new XMLHttpRequest();
+		ajax.open( "POST", "contact-form.php" );
+		ajax.onreadystatechange = function() {
+			if(ajax.readyState == 4 && ajax.status == 200) {
+				if(ajax.responseText == "success"){
+					_("contact-form").innerHTML = '<h2>Thanks '+_("n").value+', your message has been sent.</h2>';
+				} else {
+					_("status").innerHTML = ajax.responseText;
+					_("contact-submit").disabled = false;
+				}
+			}
+		}
+		ajax.send( formdata );
+	}
 });
 
-(function() {
-  $(document).ready(function() {
-    return $('#contact-form').submit(function(e) {
-      var email, message, name;
-      name = document.getElementById('name');
-      email = document.getElementById('email');
-			subject = document.getElementById('subject');
-      message = document.getElementById('message');
-      if (!name.value || !email.value || !subject.value || !message.value) {
-        alert('Please check your entries');
-        return false;
-      } else {
-        $.ajax({
-          method: 'POST',
-          url: '//formspree.io/tchuang.928@gmail.com',
-          data: $('#contact-form').serialize(),
-          datatype: 'json'
-        });
-        e.preventDefault();
-        $(this).get(0).reset();
-        return alert('Message sent');
-      }
-    });
-  });
-
-}).call(this);

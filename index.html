@@ -334,25 +334,28 @@
 					</div>
 					<div class="row formPadding">
 							<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2">
-								<form id="contact-form" class="form">
+								<form id="contact-form" onsubmit="submitForm(); return false;" class="form">
 											<div class="form-group">
 													<label class="form-label" for="name">Name *</label>
 													<input type="text" class="form-control" id="name" name="name" placeholder="Name *" tabindex="1" required>
 											</div>                            
 											<div class="form-group">
 													<label class="form-label" for="email">Email *</label>
-													<input type="email" class="form-control" id="email" name="_replyto" placeholder="Email *" tabindex="2" required>
+													<input type="email" class="form-control" id="email" name="email" placeholder="Email *" tabindex="2" required>
 											</div>                            
 											<div class="form-group">
 													<label class="form-label" for="subject">Subject *</label>
-													<input type="text" class="form-control" id="subject" name="_subject" placeholder="Subject *" tabindex="3" required>
+													<input type="text" class="form-control" id="subject" name="subject" placeholder="Subject *" tabindex="3" required>
 											</div>                            
 											<div class="form-group">
 													<label class="form-label" for="message">Message *</label>
-													<textarea rows="5" cols="50" type="text" name="_gotcha" class="form-control" id="message" placeholder="Message *" tabindex="4" required></textarea>
+													<textarea rows="5" cols="50" type="text" name="message" class="form-control" id="message" placeholder="Message *" tabindex="4" required></textarea>
 											</div>
 											<div class="text-right">
-												<button type="submit" name="submit" id="contact-submit" class="btn btn-start-order">Send</button>
+												<p>
+													<button type="submit" name="submit" id="contact-submit" class="btn btn-start-order">Send</button>
+													<span id="status"></span>
+												</p>
 											</div>
 									</form>
 							</div>
