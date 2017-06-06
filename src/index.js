@@ -73,7 +73,8 @@ $(document).ready(() => {
 
 	// smooth scrolling
 	$('a').click(function () {
-		$('body').stop().animate({
+		e.preventDefault();
+		$('html,body').stop().animate({
 			scrollTop: $(this.hash).offset().top - 70
 		}, 1000);
 		return false;
