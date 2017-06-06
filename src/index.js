@@ -155,7 +155,7 @@ $(document).ready(function() {
 			subject = document.getElementById('subject');
       message = document.getElementById('message');
       if (!name.value || !email.value || !subject.value || !message.value) {
-        alert.error('Please check your entries');
+        alert('Please check your entries');
         return false;
       } else {
         $.ajax({
@@ -166,7 +166,7 @@ $(document).ready(function() {
         });
         e.preventDefault();
         $(this).get(0).reset();
-        return alert.success('Message sent');
+        return alert('Message sent');
       }
     });
   });
