@@ -79,3 +79,7 @@ textarea {
 	border-color: #2fc8eb;
 	color: #2fc8eb;
 }
+
+.error {
+	color: red;
+}

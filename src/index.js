@@ -101,7 +101,7 @@ $(document).ready(() => {
 	*/
 });
 
-// contact form
+// contact form animation
 $(document).ready(function() {
 	// Test for placeholder support
     $.support.placeholder = (function(){
@@ -145,3 +145,30 @@ $(document).ready(function() {
         });
     } 
 });
+
+(function() {
+  $(document).ready(function() {
+    return $('#contact-form').submit(function(e) {
+      var email, message, name;
+      name = document.getElementById('name');
+      email = document.getElementById('email');
+			subject = document.getElementById('subject');
+      message = document.getElementById('message');
+      if (!name.value || !email.value || !subject.value || !message.value) {
+        alert.error('Please check your entries');
+        return false;
+      } else {
+        $.ajax({
+          method: 'POST',
+          url: '//formspree.io/tchuang.928@gmail.com',
+          data: $('#contact-form').serialize(),
+          datatype: 'json'
+        });
+        e.preventDefault();
+        $(this).get(0).reset();
+        return alert.success('Message sent');
+      }
+    });
+  });
+
+}).call(this);
