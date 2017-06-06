@@ -74,11 +74,15 @@ $(document).ready(() => {
 
 	// smooth scrolling
 	$('a').click(function(e) {
-		e.preventDefault();
-		$('html,body').stop().animate({
-			scrollTop: $(this.hash).offset().top - 70
-		}, 1000);
-		return false;
+		if (this.hash !== "") {
+			e.preventDefault();
+			var hash = this.hash;
+			$('html, body').stop().animate({
+				scrollTop: $(hash).offset().top - 70
+			}, 1000, () => {
+				window.location.hash = hash;
+			});
+		}
 	});
 
 	// scrolling animations
@@ -88,11 +92,13 @@ $(document).ready(() => {
 		contentSubtitleAnimation();
 		topOfPage();
 	});
+	/*
 	// detect scroll position
 	$(window).scroll((event) => {
 		var scroll = $(window).scrollTop();
 		console.log(scroll);
 	});
+	*/
 });
 
 // contact form
