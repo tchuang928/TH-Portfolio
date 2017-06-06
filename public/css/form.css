@@ -80,6 +80,10 @@ textarea {
 	color: #2fc8eb;
 }
 
+.btn-start-order:hover {
+	cursor: pointer;
+}
+
 .error {
 	color: red;
 }
