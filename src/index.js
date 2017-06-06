@@ -73,9 +73,8 @@ $(document).ready(() => {
 
 	// smooth scrolling
 	$('a').click(function () {
-		var $href = $(this).attr('href');
 		$('body').stop().animate({
-			scrollTop: $($href).offset().top - 70
+			scrollTop: $(this.hash).offset().top - 70
 		}, 1000);
 		return false;
 	});
