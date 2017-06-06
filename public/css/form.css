@@ -14,6 +14,20 @@
 	margin-top: 15px;
 }
 
+.email-link {
+	color: black;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+
+.email-link:hover,
+.email-link:focus {
+	color: #2fc8eb;
+	text-decoration: none;
+}
+
 .formPadding {
 	padding-top: 75px;
 }
