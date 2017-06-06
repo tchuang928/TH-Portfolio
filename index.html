@@ -64,18 +64,21 @@
 
 							<ul class="nav navbar-nav navRight">
 								<li>
-								<a href="#aboutLink" class="navItem">
-									<span>ABOUT ME</span>
-								</a>
-								</li>
-								<li>
-									<a href="#projectsLink" class="navItem">
-										<span>PROJECTS</span>
+									<span id="about-active"></span>
+									<a href="#aboutLink" class="navItem">
+										<span id="about-active-text">ABOUT ME</span>
 									</a>
 								</li>
 								<li>
+									<span id="projects-active"></span>
+									<a href="#projectsLink" class="navItem">
+										<span id="projects-active-text">PROJECTS</span>
+									</a>
+								</li>
+								<li>
+									<span id="contact-active"></span>
 									<a href="#contactLink" class="navItem">
-										<span>CONTACT</span>
+										<span id="contact-active-text">CONTACT</span>
 									</a>
 								</li>
 							</ul>
@@ -335,7 +338,7 @@
 					<div class="row formPadding">
 							<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xs-offset-2">
 								<form id="contact-form" action="https://formspree.io/tc.huang928@gmail.com" method="POST" class="form">
-									<input type="text" name="_gotcha" style="display:none" />
+									<input type="text" name="_gotcha" style="display:none"/>
 									<div class="form-group">
 											<label class="form-label" for="name">Name *</label>
 											<input type="text" class="form-control" id="name" name="name" placeholder="Name *" tabindex="1" required>

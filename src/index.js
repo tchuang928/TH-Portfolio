@@ -10,6 +10,52 @@ function navbarAnimation() {
 	}
 }
 
+function navbarAboutActive() {
+	let position = $(document).scrollTop();
+	let nav_height = $('nav').outerHeight();
+
+	let aboutSection = $('#aboutLink');
+		let top = aboutSection.offset().top - nav_height - 10;
+		let bottom = top + aboutSection.outerHeight();
+
+		if (position >= top && position <= bottom) {
+			$('#about-active').addClass('nav-about-active');
+		} else {
+			$('#about-active').removeClass('nav-about-active');
+		}
+}
+
+function navbarProjectsActive() {
+	let position = $(document).scrollTop();
+	let nav_height = $('nav').outerHeight();
+
+	let projectsSection = $('#projectsLink');
+		let top = projectsSection.offset().top - nav_height - 10;
+		let bottom = top + projectsSection.outerHeight();
+
+		if (position >= top && position <= bottom) {
+			$('#projects-active').addClass('nav-projects-active');
+		} else {
+			$('#projects-active').removeClass('nav-projects-active');
+		}
+}
+
+function navbarContactActive() {
+	let position = $(document).scrollTop();
+	let nav_height = $('nav').outerHeight();
+
+	let contactSection = $('#contactLink');
+		let top = contactSection.offset().top - nav_height - 10;
+		let bottom = top + contactSection.outerHeight();
+
+		if (position >= top && position <= bottom) {
+			$('#contact-active').addClass('nav-contact-active');
+		} else {
+			$('#contact-active').addClass('nav-contact-active');
+		}
+}
+
+
 // content section subtitle animation on scroll
 function contentSubtitleAnimation() {
 	
@@ -71,6 +117,9 @@ $(document).ready(() => {
 	navbarAnimation();
 	contentSubtitleAnimation();
 	topOfPage();
+	navbarAboutActive();
+	navbarProjectsActive();
+	navbarContactActive();
 
 	// smooth scrolling
 	$('a').click(function(e) {
@@ -91,6 +140,9 @@ $(document).ready(() => {
 		navbarAnimation();
 		contentSubtitleAnimation();
 		topOfPage();
+		navbarAboutActive();
+		navbarProjectsActive();
+		navbarContactActive();
 	});
 	/*
 	// detect scroll position
@@ -144,29 +196,4 @@ $(document).ready(function() {
 			}
 		});
 	} 
-
-	function _(id){ return document.getElementById(id); }
-	function submitForm(){
-		_("contact-submit").disabled = true;
-		_("status").innerHTML = 'please wait ...';
-		var formdata = new FormData();
-		formdata.append( "name", _("name").value );
-		formdata.append( "email", _("email").value );
-		formdata.append( "subject", _("subject").value );
-		formdata.append( "message", _("message").value );
-		var ajax = new XMLHttpRequest();
-		ajax.open( "POST", "contact-form.php" );
-		ajax.onreadystatechange = function() {
-			if(ajax.readyState == 4 && ajax.status == 200) {
-				if(ajax.responseText == "success"){
-					_("contact-form").innerHTML = '<h2>Thanks '+_("name").value+', your message has been sent.</h2>';
-				} else {
-					_("status").innerHTML = ajax.responseText;
-					_("contact-submit").disabled = false;
-				}
-			}
-		}
-		ajax.send( formdata );
-	}
 });
-

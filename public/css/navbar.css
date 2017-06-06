@@ -196,3 +196,44 @@
 	transform: translateX(-50%) translateY(-50%) scale(1);
 }
 
+.nav-about-active {
+	position: absolute;
+	top: -5px;
+	left: 25px;
+	color: white;
+	line-height: 26px;
+	height: 60px;
+	width: 60px;
+	font-size: 16px;
+	border: 6px solid rgba(255,255,255,0.3);
+	border-radius: 50%;
+	transition: all .5s;
+	}
+
+.nav-projects-active {
+	position: absolute;
+	top: -5px;
+	left: 23px;
+	color: white;
+	line-height: 26px;
+	height: 60px;
+	width: 60px;
+	font-size: 16px;
+	border: 6px solid rgba(255,255,255,0.3);
+	border-radius: 50%;
+	transition: all .5s;
+	}
+
+.nav-contact-active {
+	position: absolute;
+	top: -5px;
+	left: 21px;
+	color: white;
+	line-height: 26px;
+	height: 60px;
+	width: 60px;
+	font-size: 16px;
+	border: 6px solid rgba(255,255,255,0.3);
+	border-radius: 50%;
+	transition: all .5s;
+	}
