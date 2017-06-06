@@ -196,6 +196,16 @@
 	transform: translateX(-50%) translateY(-50%) scale(1);
 }
 
+#about-active,
+#about-active-text,
+#projects-active,
+#projects-active-text,
+#contact-active,
+#contact-active-text {
+	-webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
 .nav-about-active {
 	position: absolute;
 	top: -5px;
@@ -207,8 +217,7 @@
 	font-size: 16px;
 	border: 6px solid rgba(255,255,255,0.3);
 	border-radius: 50%;
-	transition: all .5s;
-	}
+}
 
 .nav-projects-active {
 	position: absolute;
@@ -221,8 +230,7 @@
 	font-size: 16px;
 	border: 6px solid rgba(255,255,255,0.3);
 	border-radius: 50%;
-	transition: all .5s;
-	}
+}
 
 .nav-contact-active {
 	position: absolute;
@@ -235,5 +243,8 @@
 	font-size: 16px;
 	border: 6px solid rgba(255,255,255,0.3);
 	border-radius: 50%;
-	transition: all .5s;
-	}
+}
+
+.nav-active-text {
+	color: #0eb7da;  
+}

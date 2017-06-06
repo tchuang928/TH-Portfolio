@@ -20,8 +20,10 @@ function navbarAboutActive() {
 
 		if (position >= top && position <= bottom) {
 			$('#about-active').addClass('nav-about-active');
+			$('#about-active-text').addClass('nav-active-text');
 		} else {
 			$('#about-active').removeClass('nav-about-active');
+			$('#about-active-text').removeClass('nav-active-text');
 		}
 }
 
@@ -35,8 +37,10 @@ function navbarProjectsActive() {
 
 		if (position >= top && position <= bottom) {
 			$('#projects-active').addClass('nav-projects-active');
+			$('#projects-active-text').addClass('nav-active-text');
 		} else {
 			$('#projects-active').removeClass('nav-projects-active');
+			$('#projects-active-text').removeClass('nav-active-text');
 		}
 }
 
@@ -50,8 +54,10 @@ function navbarContactActive() {
 
 		if (position >= top && position <= bottom) {
 			$('#contact-active').addClass('nav-contact-active');
+			$('#contact-active-text').addClass('nav-active-text');
 		} else {
-			$('#contact-active').addClass('nav-contact-active');
+			$('#contact-active').removeClass('nav-contact-active');
+			$('#contact-active-text').removeClass('nav-active-text');
 		}
 }
 
