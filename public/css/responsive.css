@@ -28,13 +28,6 @@
 	}
 }
 
-@media (max-width: 1100px) {
-
-	#projects {
-		column-count: 1 !important;
-		padding: 0px 50px;
-	}
-}
 
 /* collapse navbar earlier */
 @media (min-width: 933px) and (max-width: 992px) {
@@ -184,6 +177,30 @@
 
 	.iconMargin {
 		padding: 0px 100px;
+	}
+}
+
+@media (max-width: 1100px) {
+
+	#projects {
+		padding: 0px 50px;
+	}
+}
+
+@media (max-width: 991px) {
+
+	#projects {
+		column-count: 1 !important;
+		padding: 0px 50px;
+	}
+
+	.portfolio-item .img-overlay {
+		opacity: 1;
+	}
+
+	.overlay-text {
+		padding: 5px 20px 5px 0; 
+		transition: color .3s;
 	}
 }
 
