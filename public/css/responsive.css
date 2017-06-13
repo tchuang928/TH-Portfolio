@@ -7,15 +7,6 @@
 	}
 }
 
-@media (min-width: 950px) and (max-width: 1150px) {
-	.container-fluid {
-		max-width: 900px !important;
-	}
-
-	#aboutText {
-	}
-}
-
 @media (min-width 992px) {
 	.navLeft {
 		padding-right: 130px;
@@ -141,16 +132,26 @@
 		border-width: 0px !important;
 	}
 
+}
+
+@media (max-width: 991px) {
 	#selfie img {
-		padding: 0 150px;
+		padding: 0 75px;
 		width: 100%;
 		height: auto;
 	}
 
 	#aboutText p {
-		padding: 0 135px;
+		padding: 20px 60px;
 		width: 100%;
 	}
+
+	.iconMargin {
+		padding: 0px 100px;
+	}
+
+	#projects {
+		column-count: 1 !important;
+		padding: 0px 50px;
+	}
 }
-
-
