@@ -5,7 +5,7 @@ html, body{
 }
 
 .container-fluid {
-	max-width: 1200px !important;
+	max-width: 1200px ;
 }
 
 #wrapper {
