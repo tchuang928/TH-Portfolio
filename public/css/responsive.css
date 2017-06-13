@@ -57,7 +57,7 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 803px) {
+@media (min-width: 769px) and (max-width: 803px) {
 	.navbar-collapse.collapse {
 		display: none !important;
 	}
@@ -86,7 +86,7 @@
 	}
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 	.navbar-collapse.collapse {
 		display: none !important;
 	}
