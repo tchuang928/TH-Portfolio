@@ -8,7 +8,7 @@
 }
 
 /* collapse navbar earlier */
-@media (min-width: 933px) and (max-width: 991px) {
+@media (min-width: 933px) and (max-width: 992px) {
 	.navbar-collapse.collapse.in {
 		display: block !important;
 	}
@@ -19,7 +19,7 @@
 	}
 }
 
-@media (min-width: 803px) and (max-width: 932px) {
+@media (min-width: 803px) and (max-width: 933px) {
 	.navbar-collapse.collapse.in {
 		display: block !important;
 	}
@@ -35,7 +35,7 @@
 	}
 }
 
-@media (min-width: 768px) and (max-width: 802px) {
+@media (min-width: 768px) and (max-width: 803px) {
 	.navbar-collapse.collapse {
 		display: none !important;
 	}
@@ -64,7 +64,7 @@
 	}
 }
 
-@media (min-width: 0px) and (max-width: 767px) {
+@media (min-width: 0px) and (max-width: 768px) {
 	.navbar-collapse.collapse {
 		display: none !important;
 	}
@@ -96,8 +96,31 @@
 		text-align: left;
 	}
 
-	.navRight li {
-		width: 100%;
+	.navbar .navbar-nav {
+			display: block !important;
+			overflow-y: hidden;
+			float: none;
+	}
+
+	.nav-about-active {
+		border: 0px !important;
+	}
+
+	.nav-projects-active {
+		border: 0px !important;
+	}
+
+	.nav-contact-active {
+		border: 0px !important;
+	}
+
+	.circle-effect a::before,
+	.circle-effect a::after {
+		border: 0px solid rgba(255,255,255,0.3) !important;
+	}
+
+	.circle-effect a::after {
+		border-width: 0px !important;
 	}
 }
 
