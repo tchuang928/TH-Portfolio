@@ -79,3 +79,12 @@
 	padding: 0;
 }
 
+.linkHover:hover,
+.linkHover:focus {
+	text-decoration: none;
+	color: #0eb7da; 
+}
+
+.linkHover {
+	transition: color 0.3s;
+}

@@ -74,14 +74,19 @@
 }
 /* Mobile version */
 .navbar-default .navbar-toggle {
-    border-color: #DDD;
+	border-color: transparent;
+	transition: background-color 0.3s linear;
 }
-.navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-    background-color: #fff;
+	background-color: transparent;
 }
+
+.navbar-default .navbar-toggle:hover {
+	background-color: #0c95b8;
+}
+
 .navbar-default .navbar-toggle .icon-bar {
-    background-color: #CCC;
+	background-color: #CCC;
 }
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
