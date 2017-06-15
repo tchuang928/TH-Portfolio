@@ -147,7 +147,7 @@
 	#intro, #introBlur {
 		background-image: url("../img/rsz_1bluegrey.jpg");
 		/* parallax */
-		background-attachment: fixed;
+		background-attachment: scroll;
 		background-position: center;
 		background-repeat: no-repeat;
 	}
