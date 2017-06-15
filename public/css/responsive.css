@@ -144,6 +144,13 @@
 	.circle-effect a::after {
 		border-width: 0px !important;
 	}
+	#intro, #introBlur {
+		background-image: url("../img/rsz_1bluegrey.jpg");
+		/* parallax */
+		background-attachment: fixed;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 }
 
 @media (min-width: 600px) and (max-width: 991px) {
